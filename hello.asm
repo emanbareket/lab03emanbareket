@@ -19,14 +19,16 @@ main:
     and $t2 $t0 $t1
     beq $t2 $t1 mult_odd
     li $t4 3
-    mult $t3 $t0 $t4
+    mult $t0 $t4
+    mflo $t3
     li $v0 1
     move $a0 $t3
     syscall
     j exit
 mult_odd:
     li $t4 2
-    mult $t3 $t0 $t4
+    mult $t0 $t4
+    mflo $t3
     li $v0 1
     move $a0 $t3
     syscall
