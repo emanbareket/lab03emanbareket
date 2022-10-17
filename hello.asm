@@ -9,26 +9,26 @@
 #Text Area (i.e. instructions)
 .text
 main:
-    li $v0, 4
-    la $a0, prompt
+    li $v0 4
+    la $a0 prompt
     syscall
-    li $v0, 5
+    li $v0 5
     syscall
-    move $t0, $v0
-    li $t1, 1
-    and $t2, $t0, $t1
-    beq $t2, $t1, mult_odd
-    li $t4, 3
-    mult $t3, $t0, $t4
-    li $v0, 1
-    move $a0, $t3
+    move $t0 $v0
+    li $t1 1
+    and $t2 $t0 $t1
+    beq $t2 $t1 mult_odd
+    li $t4 3
+    mult $t3 $t0 $t4
+    li $v0 1
+    move $a0 $t3
     syscall
     j exit
 mult_odd:
-    li $t4, 2
-    mult $t3, $t0, $t4
-    li $v0, 1
-    move $a0, $t3
+    li $t4 2
+    mult $t3 $t0 $t4
+    li $v0 1
+    move $a0 $t3
     syscall
     j exit
 	# TODO: Write your code here
