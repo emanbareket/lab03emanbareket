@@ -10,13 +10,13 @@
 .text
 main:
     li $v0, 4
-    la $a0, promt
+    la $a0, prompt
     syscall
     li $v0, 5
     syscall
     move $t0, $v0
     li $t1, 1
-    and $t2, $t0 $t1
+    and $t2, $t0, $t1
     beq $t2, $t1, mult_odd
     mult $t3, $t0, 2
     li $v0, 1
