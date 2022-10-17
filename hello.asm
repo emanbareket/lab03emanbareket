@@ -18,13 +18,15 @@ main:
     li $t1, 1
     and $t2, $t0, $t1
     beq $t2, $t1, mult_odd
-    mult $t3, $t0, 2
+    li $t4, 2
+    mult $t3, $t0, $t4
     li $v0, 1
     move $a0, $t3
     syscall
     j exit
 mult_odd:
-    mult $t3, $t0, 3
+    li $t4, 3
+    mult $t3, $t0, $t4
     li $v0, 1
     move $a0, $t3
     syscall
