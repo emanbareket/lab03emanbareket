@@ -9,7 +9,7 @@ main:
     move $t0, $v0
     li $v0, 5
     syscall
-    move $t1, v0
+    move $t1, $v0
     sub $t2, $t0, $t1
     sll $t3, $t2, 4
     li $t4, 8
